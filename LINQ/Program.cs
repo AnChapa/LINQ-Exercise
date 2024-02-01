@@ -54,17 +54,11 @@
             "SimCity"
             };
             Console.WriteLine("Unordered list:\n-------------------------");
-            foreach (var game in videoGames)
-            {
-                Console.WriteLine(game);
-            }
+            videoGames.ForEach(x => Console.WriteLine(x));
 
             Console.WriteLine("Ordered by title length:\n-------------------------");
             videoGames = videoGames.OrderBy(x => x.Length).ThenBy(x => x).ToList();
-            foreach (var game in videoGames)
-            {  
-                Console.WriteLine(game);
-            }
+            videoGames.ForEach(x => Console.WriteLine(x));
         }
     }
 }
